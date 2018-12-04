@@ -14,7 +14,7 @@
 	try     
 	{     
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		String url="jdbc:mysql://192.168.190.68:3306/word?rewriteBatchedStatements=true";
+		String url="jdbc:mysql://ip:3306/word?rewriteBatchedStatements=true";
 		String user="bbs";
 		String password="123456";
 		Connection   conn=   DriverManager.getConnection(url,user,password);
