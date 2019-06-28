@@ -13,9 +13,9 @@
 	try     
 	{     
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		String url="jdbc:mysql://192.168.192.217:3306/test?rewriteBatchedStatements=true";
+		String url="jdbc:mysql://192.168.192.139:3306/test?rewriteBatchedStatements=true";
 		String user="root";
-		String password="cdel9999";
+		String password="";
 		Connection   conn=   DriverManager.getConnection(url,user,password);
 		conn.setAutoCommit(false);
 		int id=0;
@@ -25,7 +25,7 @@
 		long start_time = System.currentTimeMillis();		
 		if (stmt_type==1)
 		{ 
-				String pbase_sql="select * from company where id >?";
+				String pbase_sql="select * from class where id >?";
 				PreparedStatement  prepared_stmt=conn.prepareStatement(pbase_sql);
 				prepared_stmt.setInt(1, id);
 				out.print("sql===:"+prepared_stmt.toString()+"</br>");
